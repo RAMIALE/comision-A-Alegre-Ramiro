@@ -1,0 +1,26 @@
+<!-- views/eliminarPublicacion.ejs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Publicación</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eliminar Publicación</h1>
+        <p>¿Estás seguro de que deseas eliminar esta publicación?</p>
+        <p>Título: <%= publicacion.titulo %></p>
+        <p>Contenido: <%= publicacion.contenido %></p>
+        <% if (publicacion.imagenURL) { %>
+            <img src="<%= publicacion.imagenURL %>" alt="Imagen relacionada" class="img-fluid">
+        <% } %>
+        <p>Fecha de Creación: <%= publicacion.fechaCreacion.toDateString() %></p>
+        <form action="/eliminar-publicacion/<%= publicacion.id %>" method="post">
+            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+        </form>
+        <a href="/" class="btn btn-secondary mt-3">Cancelar</a>
+    </div>
+</body>
+</html>

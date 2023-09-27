@@ -1,0 +1,37 @@
+<!-- views/paginaPrincipal.ejs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Multitemático</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Foro Multitemático</h1>
+        <h2 class="mt-3">Publicaciones Recientes</h2>
+        
+        <!-- Código para mostrar las publicaciones -->
+        <ul class="list-group mt-3">
+            <% publicaciones.forEach((publicacion) => { %>
+                <li class="list-group-item mb-3">
+                    <h3><%= publicacion.titulo %></h3>
+                    <p><%= publicacion.contenido %></p>
+                    <% if (publicacion.imagenURL) { %>
+                        <img src="<%= publicacion.imagenURL %>" alt="Imagen relacionada" class="img-fluid">
+                    <% } %>
+                    <p>Fecha de Creación: <%= publicacion.fechaCreacion.toDateString() %></p>
+                    <!-- Agrega un enlace para editar la publicación -->
+                    <a href="/editar-publicacion/<%= publicacion.id %>" class="btn btn-primary">Editar</a>
+                    <!-- Agrega un enlace para eliminar la publicación -->
+                    <a href="/eliminar-publicacion/<%= publicacion.id %>" class="btn btn-danger">Eliminar</a>
+                </li>
+            <% }); %>
+        </ul>
+
+        <a href="/crear-publicacion" class="btn btn-primary mt-3">Crear Nueva Publicación</a>
+    </div>
+</body>
+</html>

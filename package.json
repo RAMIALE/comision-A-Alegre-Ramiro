@@ -1,0 +1,22 @@
+{
+  "name": "c21646aalegreramiro",
+  "version": "1.0.0",
+  "description": "Foro Multitematico - Proyecto de Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Ramiro Alegre",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0"
+  }
+}

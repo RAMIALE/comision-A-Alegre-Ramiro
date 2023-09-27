@@ -1,0 +1,10 @@
+# Ignorar archivos de configuración locales
+.env
+
+# Ignorar directorios y archivos generados por Node.js
+node_modules/
+package-lock.json
+.DS_Store
+
+# Ignorar archivos de registro
+logs/
