@@ -14,11 +14,11 @@ Asegúrate de tener instalados los siguientes componentes antes de ejecutar la a
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/RAMIALE/C21646Aalegreramiro.git
+   git clone https://github.com/RAMIALE/C21646Aalegreramiro - copia.git
 
 # Navega al directorio del proyecto:
    
-   cd https://github.com/RAMIALE/C21646Aalegreramiro.git
+   cd https://github.com/RAMIALE/C21646Aalegreramiro - copia.git
 
 
 ## Instala las dependencias del proyecto:
